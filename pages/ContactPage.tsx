@@ -51,31 +51,19 @@ const ContactPage: React.FC = () => {
                 </a>
             </div>
           </div>
-          {/* Contact Form */}
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <form action="https://formsubmit.co/info@nmr.co.id" method="POST">
-                  <input type="hidden" name="_subject" value="New Contact Form Submission from NMR Website" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value={window.location.origin + "/contact?success=true"} />
-                  
-                  <div className="mb-4">
-                      <label htmlFor="name" className="block text-gray-700 font-medium mb-2">{t('contact.form.name')}</label>
-                      <input type="text" id="name" name="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green" required />
-                  </div>
-                  <div className="mb-4">
-                      <label htmlFor="email" className="block text-gray-700 font-medium mb-2">{t('contact.form.email')}</label>
-                      <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green" required />
-                  </div>
-                  <div className="mb-6">
-                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">{t('contact.form.message')}</label>
-                      <textarea id="message" name="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green" required></textarea>
-                  </div>
-                  <div className="text-center">
-                      <button type="submit" className="bg-brand-green text-white font-semibold py-3 px-10 rounded-md hover:opacity-90 transition-opacity duration-300 w-full">
-                          {t('contact.form.submit')}
-                      </button>
-                  </div>
-              </form>
+          {/* Contact Form Replacement */}
+          <div className="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center justify-center text-center h-full min-h-[400px]">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{t('contact.form.submit')}</h3>
+              <p className="text-gray-600 mb-8">
+                {t('contact.intro')}
+              </p>
+              <a 
+                href="mailto:info@nmr.co.id?subject=Partnership%20Inquiry&body=Hi,%20we'd%20like%20to%20do%20partnership%20with%20Nur%20Mutiara%20Riau"
+                className="bg-brand-green text-white font-semibold py-4 px-12 rounded-md hover:opacity-90 transition-opacity duration-300 inline-flex items-center text-lg shadow-lg"
+              >
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                Email Us
+              </a>
           </div>
         </div>
       </div>
